@@ -1,0 +1,467 @@
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Zoe's custom styles
+   ========================================================================== */
+
+/*------- FIZZBUZZ STYLES --*/
+
+body {
+  background-color: #13133a;
+}
+
+a {
+  color: #e6e6ff;
+  text-decoration: none;
+}
+
+.div1 {
+  border: 2px groove #e6e6ff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin: 1em;
+}
+
+h1 {
+  font-family: 'Gugi', cursive;
+  font-size: 3em;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: neon 3s linear infinite alternate, rotate 10s linear infinite alternate;
+  font-size: 4em;
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(6deg);
+  }
+  to {
+    transform: rotate(-6deg);
+  }
+}
+
+@keyframes neon {
+  0%{
+          text-shadow: 0 0 5px #b6ff00, 0 0 14px #b6ff00, 0 0 20px #b6ff00,
+            0 0 25px #b6ff00, 0 0 30px #b6ff00;
+        }
+        50% {
+          text-shadow: 0 0 5px #ff00ff, 0 0 14px #ff00ff, 0 0 20px #ff00ff,
+            0 0 25px #ff00ff, 0 0 30px #ff00ff;
+        }
+        100% {
+          text-shadow: 0 0 5px #228dff, 0 0 14px #228dff, 0 0 20px #228dff,
+            0 0 25px #228dff, 0 0 30px #228dff;
+        }
+}
+
+h2 {
+  color: #dbf0f0;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+h3 {
+  color: #dbf0f0;
+  font-family: 'Slabo 27px', serif;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  text-align: center; 
+}
+
+p {
+  color: #dbf0f0;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  width: 80%;
+}
+
+/*-- User Input Form --*/
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#question {
+  text-align: center;
+}
+
+input {
+  background: #050515;
+  border: 2px solid #228dff;
+  color: #fff;
+  font-size: 1.3em;
+  padding: 1em;
+  margin: 1em;
+  width: 6em;
+  text-align: center;
+}
+
+button {
+  background: #050515;
+  border: 2px solid #ff00ff;
+  color: #dbf0f0;
+  font-size: 1.3em;
+  padding: 1em;
+  margin: 1em;
+  width: 8em;
+}
+
+#value-echo {
+  display: flex;
+}
+
+#value-echo p{
+  font-size: 1em;
+  color: #fff;
+}
+
+/*-- FizzBuzz Results Container --*/
+
+#result {
+  border: 1px solid #228dff;
+  background: #050515;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0.5em;
+  margin: 0.5em;
+  min-height: 10em;
+  overflow: auto;
+  text-align: center;
+  width: 60%;
+}
+
+h4 {
+  color: #dbf0f0;
+  font-size: 1.2em;
+  margin: 10px;
+  width: 110px;
+}
+
+.fbz {
+  color: #ffffff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: neon 2s linear infinite alternate-reverse, rotate 3s linear infinite alternate;
+  font-size: 0.7em
+}
+
+.fz {
+  color: #ffffff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: neon 5s linear infinite alternate, rotate 3s linear infinite alternate;
+  font-size: 0.7em
+}
+
+.bz {
+  color: #ffffff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: neon 8s linear infinite alternate, rotate 3s linear infinite alternate;
+  font-size: 0.7em
+}
+
+/*-- Pseudo Classes --*/
+
+input:focus {
+  box-shadow: 0 0 5px #9f9;
+  background: #000;
+}
+input:focus,
+button:focus,
+button:active {
+  outline: none;
+}
+button:hover {
+  box-shadow: 0 0 5px #99f;
+  background: #111;
+}
+button:active {
+  box-shadow: inset 0px 0px 5px #99f;
+}
+
+.back-button button {
+  background: #050515;
+  border: 1px solid #fff;
+  color: #dbf0f0;
+  font-size: 0.8em;
+  padding: 0.2em;
+  margin: 1em;
+  width: 10em;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
